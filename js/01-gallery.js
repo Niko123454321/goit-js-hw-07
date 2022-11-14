@@ -21,7 +21,7 @@ function createGalleryItemsMarkup(galleryItems) {
 `;
   }).join('');
   
-console.log(markup[0])
+// console.log(markup[0])
 
 }
 
@@ -34,7 +34,14 @@ function onGalleryItemsClick(event) {
     return
   }
   
-  console.log(event.target.dataset.source);
+  // console.log(event.target.dataset.source);
+
+  const instance = basicLightbox.create(`
+    <img src="${event.target.dataset.source}">
+`)
+
+instance.show()
 }
+
 
 
